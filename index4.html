@@ -26,7 +26,7 @@ function showPosition(position)
 	mapholder.style.width ='750px';
 	var myOptions={
 		center:latlon,zoom:17,
-		mapTypeld:google.maps.MapTypeld.ROADMAP,
+		mapTypeId:google.maps.MapTypeld.ROADMAP,
 		mapTypeControl :false,
 		navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
 	};
@@ -44,7 +44,7 @@ function showError(error)
 		x.innerHTML="La formacion de la localizacion no esta disponible."
 		break;
 		case error.TIMEOUT:
-		x.innerHTML="El tiempode peticion ha expirado."
+		x.innerHTML="El tiempo de peticion ha expirado."
 		break;
 		case error.UNKNOWN_ERROR:
 		x.innerHTML="Ha ocurrido un error desconocido."
