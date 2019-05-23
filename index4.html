@@ -15,7 +15,7 @@
 <script type="text/javascript">
 var x=document.getElementById("demo");
 function cargarmap(){
-	navigator .geolocation.getCurrenPosition (showPosition,showError);
+	navigator .geolocation.getCurrentPosition (showPosition,showError);
 function showPosition(position)
 {
 	lat=position.coords.latitude;
