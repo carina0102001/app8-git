@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>Ubicacion en el mapa de google</title>
 </head>
-
 <body>
 
 <!--Llama al mapa de google con la localizacion actual del dispositivo-->
@@ -12,9 +11,11 @@
 <div id="mapholder"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk"></script>
 
-<button onClick="cargamap()">Carga mapa</button>
+<button onClick="cargarmap()">Cargar mapa</button>
 <script type="text/javascript">
 var x=document.getElementById("demo");
+function cargarmap(){
+	navigator .geolocation.getCurrenPosition (showPosition,showError);
 function showPosition(position)
 {
 	lat=position.coords.latitude;
@@ -48,7 +49,7 @@ function showError(error)
 		x.innerHTML="Ha ocurrido un error desconocido."
 		break;
 	}
-}
+}}
 </script>
 	
 </body>
